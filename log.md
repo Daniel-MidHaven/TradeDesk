@@ -1,5 +1,24 @@
 # log.md (newest entries at the top)
 
+## 2026-11-17 (Tue, 3:38pm New York, market open, closes 4:00pm): close job
+
+- Clock: trading day. Account PA35HKRDP (paper), ACTIVE, value $9,990.27 (down 0.10% today from $10,000.00), cash $3,148.25. Daily limit (3%) not hit.
+- Bought today: KO 20 @ 98.969, PG 11 @ 171.68, COST 1 @ 1114.36, PEP 13 @ 143.81 (all filled at the open, about $6,852).
+- Sold today: nothing. No stop or target was hit.
+- Stops and targets: all 4 positions still have both with Alpaca, gtc, at the prices the post-open job set. Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| KO | 20 | 98.969 | 99.265 | +$5.92 | 95.55 | 105.81 |
+| PG | 11 | 171.68 | 172.19 | +$5.61 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1113.77 | -$0.59 | 1076.20 | 1190.68 |
+| PEP | 13 | 143.81 | 142.22 | -$20.67 | 137.37 | 156.69 |
+
+- Time limit: all 4 were bought today (day 0 of 30). None reaches the limit at tomorrow's open, so the post-open job has nothing to sell.
+- Looked wrong: nothing. Note for later runs: Alpaca's open-orders list shows only the 4 targets; the stops are in status "held" and only show when looked up by id. That is normal for a bracket.
+- Positions: 4 of 5 slots used.
+- Sent the summary with notify.py (Telegram message id 11).
+
 ## 2026-11-17 (Tue, 10:09am New York, market open): post-open job
 
 - Clock: trading day, market open. Account PA35HKRDP (paper), ACTIVE, value $10,008.91 (up 0.09% today, previous close $10,000.00), cash $3,148.25. Daily limit not hit.
