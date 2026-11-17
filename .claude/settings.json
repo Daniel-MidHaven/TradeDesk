@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "deny": ["Read(./.env)"],
+    "allow": [
+      "Edit(./log.md)",
+      "Bash(python3 scan.py *)",
+      "Bash(python3 scan.py)",
+      "Bash(python scan.py *)",
+      "Bash(python scan.py)",
+      "Bash(python3 notify.py *)",
+      "Bash(python notify.py *)",
+      "Bash(python3 check_approval.py *)",
+      "Bash(python check_approval.py *)",
+      "Bash(git add log.md)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "mcp__alpaca__get_account_info",
+      "mcp__alpaca__get_account_activities",
+      "mcp__alpaca__get_portfolio_history",
+      "mcp__alpaca__get_all_positions",
+      "mcp__alpaca__get_open_position",
+      "mcp__alpaca__get_orders",
+      "mcp__alpaca__get_order_by_id",
+      "mcp__alpaca__get_clock",
+      "mcp__alpaca__get_calendar",
+      "mcp__alpaca__get_news",
+      "mcp__alpaca__get_stock_bars",
+      "mcp__alpaca__place_stock_order",
+      "mcp__alpaca__replace_order_by_id",
+      "mcp__alpaca__cancel_order_by_id",
+      "mcp__alpaca__close_position"
+    ]
+  },
+  "enabledMcpjsonServers": ["alpaca"]
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "alpaca": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd \"$CLAUDE_PROJECT_DIR\" 2>/dev/null; if [ -f .env ]; then set -a; . ./.env; set +a; fi; export ALPACA_PAPER_TRADE=true; for p in ./.venv-alpaca/Scripts/alpaca-mcp-server.exe \"C:/Users/Coolk/Documents/Claude_TradeDesk/.venv-alpaca/Scripts/alpaca-mcp-server.exe\"; do if [ -x \"$p\" ]; then exec \"$p\"; fi; done; exec uvx alpaca-mcp-server"
+      ]
+    }
+  }
+}
