@@ -3,6 +3,7 @@
 Run it with:  uv run --with matplotlib backtest.py
 Options:      --rule breakout|pullback|bounce|all   --start YYYY-MM-DD
               --end YYYY-MM-DD   --cash 10000   --title "text for the chart"
+              --name replay   (saves replay_trades.csv and replay_equity_curves.png)
 
 How it trades (the same for every rule):
 - A signal uses a day's closing prices, and the trade buys at the next day's open.
@@ -195,6 +196,7 @@ def main():
     parser.add_argument("--end", help="last day, YYYY-MM-DD (default: the last day in prices.csv)")
     parser.add_argument("--cash", type=float, default=10000)
     parser.add_argument("--title", default="Backtest on past prices. A simulation, not a track record.")
+    parser.add_argument("--name", default="", help="a word to put in front of the output file names, e.g. replay")
     args = parser.parse_args()
 
     settings = signals.load_rules()
@@ -247,11 +249,12 @@ def main():
     # Every trade, in trades.csv.
     columns = ["rule", "symbol", "shares", "entry_date", "entry_price", "stop", "target",
                "exit_date", "exit_price", "reason", "profit", "return_pct"]
-    with open(os.path.join(HERE, "trades.csv"), "w", newline="", encoding="utf-8") as f:
+    prefix = args.name + "_" if args.name else ""
+    with open(os.path.join(HERE, prefix + "trades.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=columns)
         writer.writeheader()
         writer.writerows(all_trades)
-    print(f"\nSaved {len(all_trades)} trades to trades.csv")
+    print(f"\nSaved {len(all_trades)} trades to {prefix}trades.csv")
 
     # The chart, with every line on it.
     try:
@@ -274,8 +277,8 @@ def main():
     ax.grid(alpha=0.3)
     ax.legend(loc="upper left")
     fig.tight_layout()
-    fig.savefig(os.path.join(HERE, "equity_curves.png"), dpi=130)
-    print("Saved equity_curves.png")
+    fig.savefig(os.path.join(HERE, prefix + "equity_curves.png"), dpi=130)
+    print(f"Saved {prefix}equity_curves.png")
 
 
 if __name__ == "__main__":

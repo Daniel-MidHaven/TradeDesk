@@ -1,6 +1,18 @@
 Setup instructions: setup.md
 
-# Setup progress
+# Setup progress: COMPLETE (2026-11-16)
+
+Every part of setup.md is done. Summary of the finished desk:
+
+- Account: Alpaca paper, $10,000, no positions and no orders placed during the setup.
+- Rulebook: breakout entry, 20% per trade, 5 positions max, 3% daily limit, stop 2 x ATR(14), target 4 x ATR(14), 30-day time limit. Mode: ALERT.
+- Runs on: Claude cloud scheduled tasks (option A), Opus 5.5 (user is on Pro), environment "trading desk", repo https://github.com/Daniel-MidHaven/TradeDesk (private). Five tasks: Morning 8:37am, Approve 9:17am, Post-open 10:07am, Close 3:37pm (weekdays), Review Fridays 4:37pm, New York time. Ids are in section 3l below.
+- Approval: the morning task sends trades to Telegram; the user replies "Take it." before about 9:15am ET; the Approve task checks with check_approval.py and places them. This replaces setup.md's Part 7 (which needs an always-on computer).
+- Part 8 done: one-year replay (2025-11-17 to 2026-11-16, $10,000): breakout $10,935 (+9.3%, 83 trades, 39% wins, avg win +8.6%, avg loss -4.8%, max drawdown -11.2%) vs SPY $11,163 and all 30 stocks $11,450. Files: replay_trades.csv, replay_equity_curves.png (`backtest.py --name replay`).
+- Not yet seen working when the setup ended: a real scheduled morning run, the scanner sub-agent in the cloud, the approve run placing orders. First real run: Tue 2026-11-17 8:37am ET.
+- In any new session here: `git pull` first (cloud runs push log.md), and read "Notes for this computer (Windows)" at the bottom.
+
+# History of the setup
 
 ## Part 1: Connect Alpaca and place a first trade (in progress)
 
