@@ -1,5 +1,22 @@
 # log.md (newest entries at the top)
 
+## 2026-11-17 (Tue, 10:09am New York, market open): post-open job
+
+- Clock: trading day, market open. Account PA35HKRDP (paper), ACTIVE, value $10,008.91 (up 0.09% today, previous close $10,000.00), cash $3,148.25. Daily limit not hit.
+- Fills: all 4 bracket orders from the approve job filled at the open. Nothing to cancel.
+- Moved each stop (2 x ATR) and target (4 x ATR) to the price paid, using the ATR from the morning entry. Alpaca accepted all 8 replacements. The stops show as held and the targets as new, in the same bracket groups, gtc.
+
+| Stock | Shares | Paid | ATR(14) | Stop | Target | Stop order id | Target order id |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| KO | 20 | 98.969 | 1.71 | 95.55 | 105.81 | a10570a1-a48c-4808-8cdd-1f8682f2a710 | 6e55cba7-9c78-492e-b0a1-3cdaa01b1c97 |
+| PG | 11 | 171.68 | 3.27 | 165.14 | 184.76 | d9e53127-7f5e-4fc7-8ab5-cc27c0ed9fdd | c96e2bc1-ebd1-4c6c-ab63-5be07e322cbc |
+| COST | 1 | 1114.36 | 19.08 | 1076.20 | 1190.68 | 59f5ed2d-f19f-40e9-b10f-2f9b91fd0df9 | 70526ca0-25c7-46cb-beb7-dcede2875851 |
+| PEP | 13 | 143.81 | 3.22 | 137.37 | 156.69 | 5e3b098d-80fc-42ab-b7fd-97e26b713364 | be3ceb7d-16d6-410a-9684-d3a687ffb749 |
+
+- Time limit: all 4 positions were bought today (day 0 of 30). None to sell.
+- Positions now: KO 20, PG 11, COST 1, PEP 13 (4 of 5 slots).
+- Sent the summary with notify.py (Telegram message id 10).
+
 ## 2026-11-17 (Tue, 9:21am New York, before the open): approve job
 
 - Mode: alert. The newest morning entry is from today and lists 4 trades waiting for approval (Telegram message id 7).
