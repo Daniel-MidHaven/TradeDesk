@@ -1,5 +1,7 @@
 # log.md (newest entries at the top)
 
+- 2026-11-17: Cloud connection test ran (no orders placed, changed or cancelled). Step 1 (Alpaca account read) worked, step 2 (scan.py --live) worked, step 3 (notify.py Telegram) worked.
+
 ## 2026-11-16 (Mon, evening): mode changed back from auto to alert
 
 - The user asked for alert again. No run happened while the mode was auto, and nothing was placed. The desk proposes trades and waits for approval.
