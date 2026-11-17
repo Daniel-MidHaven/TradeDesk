@@ -1,5 +1,31 @@
 # log.md (newest entries at the top)
 
+## 2026-11-17 (Tue, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. Scheduled run, nobody watching, so the trades were sent to Telegram and the run finished.
+- Clock: today is a trading day, market opens 9:30am New York. The run started at 8:38am, before the 9:25am cutoff.
+- Account (Alpaca paper, PA35HKRDP): value $10,000.00, cash $10,000.00, status ACTIVE, no positions, no open orders.
+- Daily limit: last full trading day (2026-11-16) change in portfolio history was 0.00%, so new trades are allowed.
+- Scan: the scanner ran `python3 scan.py --live`, prices as of the close on 2026-11-16. 4 of 30 stocks qualify for the breakout (close above the 55-day high close and above the 200-day average). None already held, and 4 trades fit in the 5 free slots, so the six-month ranking did not have to drop any.
+
+### Waiting for approval
+Telegram message id: 7
+Only counts before the open on Tue 2026-11-17 (9:30am New York). If not approved by then, drop them.
+Size is 20% of $10,000 = $2,000 per trade, whole shares. Stop (2 x ATR) and target (4 x ATR) are estimates from the last close; the post-open job moves them to the price actually paid.
+
+| Stock | Shares | Last close | About | ATR(14) | Stop (est.) | Target (est.) | 6-mo gain | News |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| KO | 20 | 99.48 | $1,990 | 1.71 | 96.05 | 106.34 | +24.0% | No earnings in the next 2 days. TD Cowen raised its target to $112 (11/17). Officer and EVP share sales (11/12, 11/16). |
+| PG | 11 | 173.02 | $1,903 | 3.27 | 166.48 | 186.10 | +23.2% | No earnings in the next 2 days. Raymond James raised its target to $185 (11/16). CFO and another executive sold over $6M. |
+| COST | 1 | 1113.74 | $1,114 | 19.08 | 1075.58 | 1190.06 | +3.8% | No earnings in the next 2 days. $30 special dividend and $4B buyback announced 11/10 (ex-date not checked). Northcoast downgrade (11/16); Evercore, Mizuho, BofA, Bernstein target raises. |
+| PEP | 13 | 146.43 | $1,904 | 3.22 | 140.00 | 159.29 | +0.3% | No earnings in the next 2 days (Q3 reported 11/10). Bernstein downgraded to Underperform, $128 target (11/17 pre-market, after the scan's close). ~1,000 job cuts. |
+
+### For the next run
+- jobs/approve.md: check for "Take it." after Telegram message id 7. Recheck the account, positions and open orders before placing. Only before 9:30am.
+- If placed, the post-open job must check the fills and move each stop and target to the price paid, using the ATR above.
+- The COST special dividend may cause a price adjustment around its ex-date; check that date if COST is held.
+- All four are consumer staples. rules.md has no sector rule; noted for the weekly review.
+
 - 2026-11-17: Cloud connection test ran (no orders placed, changed or cancelled). Step 1 (Alpaca account read) worked, step 2 (scan.py --live) worked, step 3 (notify.py Telegram) worked.
 
 ## 2026-11-16 (Mon, evening): mode changed back from auto to alert
