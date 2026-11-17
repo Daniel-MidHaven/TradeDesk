@@ -1,5 +1,23 @@
 # log.md (newest entries at the top)
 
+## 2026-11-17 (Tue, 9:21am New York, before the open): approve job
+
+- Mode: alert. The newest morning entry is from today and lists 4 trades waiting for approval (Telegram message id 7).
+- Clock: today is a trading day, market closed, opens 9:30am New York. Checked at 9:20am.
+- `python3 check_approval.py --after-message-id 7` printed APPROVED.
+- Rechecked: account PA35HKRDP (paper), ACTIVE, value $10,000.00, cash $10,000.00, no positions, no open orders. Daily limit: last full trading day (2026-11-16) change 0.00%, so new trades are allowed. 4 new positions is within the 5 max. About $6,911 total, within the cash.
+- Placed 4 bracket orders, buy at the market, time in force gtc, for the open (stop and target from the morning entry):
+
+| Stock | Shares | Stop | Target | Order id | Status |
+| --- | --- | --- | --- | --- | --- |
+| KO | 20 | 96.05 | 106.34 | 94eb7549-535b-4642-80a1-11d2003bd0a1 | pending_new |
+| PG | 11 | 166.48 | 186.10 | dff9bb9f-5bd9-4ba2-85f5-c9f07404b2d3 | pending_new |
+| COST | 1 | 1075.58 | 1190.06 | 82126d82-fc24-4fb6-976e-ff1b1d3c053f | pending_new |
+| PEP | 13 | 140.00 | 159.29 | a2bebc8d-79a8-433b-9292-51c102ea2e63 | pending_new |
+
+- Sent the summary with notify.py (Telegram message id 9).
+- For the post-open job: check the fills and move each stop (2 x ATR) and target (4 x ATR) to the price paid, using the ATR in the morning entry.
+
 ## 2026-11-17 (Tue, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. Scheduled run, nobody watching, so the trades were sent to Telegram and the run finished.
