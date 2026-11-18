@@ -1,5 +1,19 @@
 # log.md (newest entries at the top)
 
+## 2026-11-18 (Wed, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. Nothing waiting for approval.
+- Clock: today is a trading day, market closed, opens 9:30am New York. The run started at 8:38am, before the 9:25am cutoff.
+- Account PA35HKRDP (paper), ACTIVE, value $9,919.61 (pre-market prices), cash $3,148.24. Daily limit: last full trading day (2026-11-17) change -0.31% ($10,000.00 to $9,969.30), so new trades would be allowed.
+- Positions: KO 20, PG 11, COST 1, PEP 13 (4 of 5 slots). Open orders: the 4 bracket targets (KO 105.81, PG 184.76, COST 1190.68, PEP 156.69), gtc; stops held in the same brackets.
+- Scan: the scanner ran `python3 scan.py --live`, prices as of the close on 2026-11-17. Checked 30 stocks, 0 qualify. Rechecked by running the scan myself: same result. No news check needed.
+- Looked wrong: nothing.
+- Sent the summary with notify.py (Telegram message id 12).
+
+### For the next run
+- jobs/approve.md: nothing is waiting for approval today, so it has nothing to place.
+- Post-open job: no new orders today. All 4 positions are at day 1 of 30; none reaches the time limit.
+
 ## 2026-11-17 (Tue, 3:38pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Account PA35HKRDP (paper), ACTIVE, value $9,990.27 (down 0.10% today from $10,000.00), cash $3,148.25. Daily limit (3%) not hit.
