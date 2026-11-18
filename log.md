@@ -33,7 +33,6 @@
 
 - Time limit: all 4 bought 2026-11-17, day 1 of 30. None to sell.
 - Looked wrong: nothing. Positions: 4 of 5 slots.
-- Sent the summary with notify.py (Telegram message id 14).
 - Sent the summary with notify.py (Telegram message id 13).
 
 ## 2026-11-18 (Wed, 9:19am New York, before the open): approve job
