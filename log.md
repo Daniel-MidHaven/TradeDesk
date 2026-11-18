@@ -1,5 +1,22 @@
 # log.md (newest entries at the top)
 
+## 2026-11-18 (Wed, 3:37pm New York, market open, closes 4:00pm): close job
+
+- Clock: trading day. Account PA35HKRDP (paper), ACTIVE, value $9,934.02 (down 0.35% today from $9,969.30), cash $3,148.24. Daily limit (3%) not hit.
+- Bought today: nothing. Sold today: nothing (no orders submitted today; no stop or target hit).
+- Stops and targets: all 4 positions still have both with Alpaca, gtc (stops held, targets new, checked by id). Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| KO | 20 | 98.969 | 98.015 | -$19.08 | 95.55 | 105.81 |
+| PG | 11 | 171.68 | 170.67 | -$11.11 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1102.885 | -$11.48 | 1076.20 | 1190.68 |
+| PEP | 13 | 143.81 | 141.94 | -$24.31 | 137.37 | 156.69 |
+
+- Time limit: all 4 bought 2026-11-17, day 1 of 30 today, day 2 at tomorrow's open. None to sell.
+- Looked wrong: nothing. Positions: 4 of 5 slots.
+- Sent the summary with notify.py (Telegram message id 14).
+
 ## 2026-11-18 (Wed, 10:09am New York, market open): post-open job
 
 - Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,924.90 (down 0.45% today from $9,969.30), cash $3,148.24. Daily limit (3%) not hit.
@@ -16,6 +33,7 @@
 
 - Time limit: all 4 bought 2026-11-17, day 1 of 30. None to sell.
 - Looked wrong: nothing. Positions: 4 of 5 slots.
+- Sent the summary with notify.py (Telegram message id 14).
 - Sent the summary with notify.py (Telegram message id 13).
 
 ## 2026-11-18 (Wed, 9:19am New York, before the open): approve job
