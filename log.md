@@ -1,5 +1,20 @@
 # log.md (newest entries at the top)
 
+## 2026-11-19 (Thu, 9:19am New York, before the open): approve job
+
+- Mode: alert. The newest morning entry is from today and lists 1 trade waiting for approval (Telegram message id 15).
+- Clock: today is a trading day, market closed, opens 9:30am New York. Checked at 9:19am.
+- `python3 check_approval.py --after-message-id 15` printed APPROVED.
+- Rechecked: account PA35HKRDP (paper), ACTIVE, value $9,852.50, cash $3,148.24. Positions KO 20, PG 11, COST 1, PEP 13 (DIS not held). Open orders: only the 4 existing bracket legs. Daily limit: last full trading day (2026-11-18) change -0.45% ($9,969.30 to $9,924.16), so new trades are allowed. 1 new position makes 5 of 5 max. 20% of $9,852.50 = $1,970.50, still 16 shares; about $1,958, within the cash.
+- Placed 1 bracket order, buy at the market, time in force gtc, for the open (stop and target from the morning entry):
+
+| Stock | Shares | Stop | Target | Order id | Status |
+| --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 116.51 | 134.06 | f2226821-8fb2-4510-ae38-e88b25f141cd | pending_new |
+
+- Sent the summary with notify.py (Telegram message id 17).
+- For the post-open job: check the fill and move the stop and target to the price paid, using ATR 2.92 (stop = paid - 5.84, target = paid + 11.68). All 5 slots are now used.
+
 ## 2026-11-19 (Thu, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. 1 trade waiting for approval.
