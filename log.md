@@ -1,5 +1,22 @@
 # log.md (newest entries at the top)
 
+## 2026-11-19 (Thu, 3:38pm New York, market open, closes 4:00pm): close job
+
+- Clock: trading day. Account PA35HKRDP (paper), ACTIVE, value $9,759.90 (down 1.66% today from $9,924.16), cash $4,890.07. Daily limit (3%) not hit.
+- Bought today: DIS 16 @ 122.24 (bracket f2226821, filled 9:32am).
+- Sold today: KO 20 @ 95.54 (stop, about -$68.58) and PEP 13 @ 137.45 (stop, about -$82.67), both in the morning. Their targets were cancelled by Alpaca. Nothing else bought or sold since the post-open job; cash unchanged at $4,890.07.
+- Stops and targets: all 3 positions still have both with Alpaca, gtc (stops held, targets new, same bracket groups). Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 120.465 | -$28.40 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 168.325 | -$36.91 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1090.81 | -$23.55 | 1076.20 | 1190.68 |
+
+- Time limit: PG and COST bought 2026-11-17 (day 3 of 30 at tomorrow's open), DIS bought today (day 1 at tomorrow's open). None to sell.
+- Looked wrong: nothing. Positions: 3 of 5 slots (2 free for the next morning run).
+- Sent the summary with notify.py (Telegram message id 19).
+
 ## 2026-11-19 (Thu, 10:09am New York, market open): post-open job
 
 - Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,760.13 (down 1.65% today from $9,924.16), cash $4,890.07. Daily limit (3%) not hit.
