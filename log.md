@@ -1,5 +1,28 @@
 # log.md (newest entries at the top)
 
+## 2026-11-19 (Thu, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. 1 trade waiting for approval.
+- Clock: today is a trading day, market closed, opens 9:30am New York. The run started at 8:38am, before the 9:25am cutoff.
+- Account PA35HKRDP (paper), ACTIVE, value $9,863.42 (pre-market prices), cash $3,148.24. Daily limit: last full trading day (2026-11-18) change -0.45% ($9,969.30 to $9,924.16), so new trades are allowed.
+- Positions: KO 20, PG 11, COST 1, PEP 13 (4 of 5 slots, 1 free). Open orders: the 4 bracket targets (KO 105.81, PG 184.76, COST 1190.68, PEP 156.69), gtc; stops held in the same brackets.
+- Scan: the scanner ran `python3 scan.py --live`, prices as of the close on 2026-11-18. Checked 30 stocks, 1 qualifies (DIS). Rechecked by running the scan myself: same result. DIS is in stocks.txt, not held, and fits the 1 free slot.
+- Looked wrong: nothing.
+
+### Waiting for approval
+Telegram message id: 15
+Only counts before the open on Thu 2026-11-19 (9:30am New York). If not approved by then, drop it.
+Size is 20% of $9,863.42 = $1,972.68, whole shares. Stop and target are estimates from the last close; the post-open job moves them to the price actually paid.
+
+| Stock | Shares | Last close | About | ATR(14) | Stop (est.) | Target (est.) | 6-mo gain | News |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.36 | $1,958 | 2.92 | 116.51 | 134.06 | +18.5% | No earnings in the next 2 days (Q4 reported 11/17, beat). $3B cost plan, dividend +33% to $2.00, $9B FY27 buyback target. Target raises 11/16-11/18 (Jefferies $140, Barclays $135, BofA $135, Raymond James $133). Filing 11/19: Iger intends to sell ~321,690 shares. |
+
+### For the next run
+- jobs/approve.md: check for "Take it." after Telegram message id 15. Recheck the account, positions and open orders before placing. Only before 9:30am.
+- If placed, the post-open job must check the fill and move the stop and target to the price paid, using ATR 2.92 (stop = paid - 5.84, target = paid + 11.68).
+- Existing 4 positions: bought 2026-11-17, day 2 of 30 at today's open. None reaches the time limit.
+
 ## 2026-11-18 (Wed, 3:37pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Account PA35HKRDP (paper), ACTIVE, value $9,934.02 (down 0.35% today from $9,969.30), cash $3,148.24. Daily limit (3%) not hit.
