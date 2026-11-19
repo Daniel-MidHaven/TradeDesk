@@ -1,5 +1,25 @@
 # log.md (newest entries at the top)
 
+## 2026-11-19 (Thu, 10:09am New York, market open): post-open job
+
+- Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,760.13 (down 1.65% today from $9,924.16), cash $4,890.07. Daily limit (3%) not hit.
+- Order placed today: DIS bracket f2226821 filled 16 @ 122.24 at 9:32am. Nothing to cancel.
+- Stopped out this morning (bracket stops did their job, nothing for me to do):
+  - KO 20 sold @ 95.54 at 9:37am (stop 95.55; paid 98.969): about -$68.58. Its target was cancelled by Alpaca.
+  - PEP 13 sold @ 137.45 at 9:40am (stop 137.37; paid 143.81): about -$82.67. Its target was cancelled by Alpaca.
+  - Cash check: 3,148.24 - 1,955.84 (DIS) + 1,910.80 (KO) + 1,786.87 (PEP) = 4,890.07, matches Alpaca.
+- DIS stop and target moved to the price paid, ATR 2.92 from log.md (stop = 122.24 - 5.84, target = 122.24 + 11.68). Alpaca accepted both replaces: stop 116.40 (new id ece09321, held), target 133.92 (new id cc6dcf05, new), both gtc.
+
+| Stock | Shares | Paid | Now | Unrealized | Stop | Target |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 121.275 | -$15.44 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 167.56 | -$45.32 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1086.50 | -$27.86 | 1076.20 | 1190.68 |
+
+- Time limit: PG and COST bought 2026-11-17 (day 2 of 30), DIS bought today. None to sell.
+- Looked wrong: nothing. Positions: 3 of 5 slots (2 free for the next morning run).
+- Sent the summary with notify.py (Telegram message id 18).
+
 ## 2026-11-19 (Thu, 9:19am New York, before the open): approve job
 
 - Mode: alert. The newest morning entry is from today and lists 1 trade waiting for approval (Telegram message id 15).
