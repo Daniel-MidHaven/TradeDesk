@@ -1,5 +1,9 @@
 # log.md (newest entries at the top)
 
+## 2026-11-20 (Fri, 9:19am New York, before the open): approve job
+
+- Mode: alert. Today's morning entry (8:38am) lists nothing waiting for approval, so nothing to check or place. Stopped.
+
 ## 2026-11-20 (Fri, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. Nothing waiting for approval.
