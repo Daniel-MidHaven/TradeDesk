@@ -1,5 +1,21 @@
 # log.md (newest entries at the top)
 
+## 2026-11-20 (Fri, 3:38pm New York, market open, closes 4:00pm): close job
+
+- Clock: trading day. Next open Mon 2026-11-23. Account PA35HKRDP (paper), ACTIVE, value $9,751.80 (down 0.02% today from $9,754.16), cash $4,889.98. Daily limit (3%) not hit.
+- Bought today: nothing. Sold today: nothing (no orders submitted today; no stop or target hit).
+- Stops and targets: all 3 positions still have both with Alpaca, gtc, checked by id (stops held, targets new, same bracket groups). Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 118.01 | -$67.68 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 169.825 | -$20.41 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1105.58 | -$8.78 | 1076.20 | 1190.68 |
+
+- Time limit: PG and COST bought 2026-11-17 (day 5 of 30 at Monday's open), DIS bought 2026-11-19 (day 3). None to sell.
+- Looked wrong: nothing. DIS is $1.61 above its stop. Positions: 3 of 5 slots (2 free for the next morning run).
+- Sent the summary with notify.py (Telegram message id 22).
+
 ## 2026-11-20 (Fri, 10:09am New York, market open): post-open job
 
 - Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,809.64 (up 0.57% today from $9,754.16), cash $4,889.98. Daily limit (3%) not hit.
