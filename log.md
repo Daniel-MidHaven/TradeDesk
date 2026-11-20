@@ -1,5 +1,22 @@
 # log.md (newest entries at the top)
 
+## 2026-11-20 (Fri, 10:09am New York, market open): post-open job
+
+- Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,809.64 (up 0.57% today from $9,754.16), cash $4,889.98. Daily limit (3%) not hit.
+- Orders placed today: none (morning run found nothing, approve job had nothing waiting). Nothing to check or cancel.
+- Bought today: nothing, so no stops or targets to move.
+- Stops and targets: all 3 positions still have both with Alpaca, gtc, checked by id (stops held, targets new). Nothing changed.
+
+| Stock | Shares | Paid | Now | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 120.58 | -$26.56 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 170.88 | -$8.80 | 165.14 | 184.76 |
+| COST | 1 | 1114.36 | 1110.695 | -$3.67 | 1076.20 | 1190.68 |
+
+- Time limit: PG and COST bought 2026-11-17 (day 4 of 30), DIS bought 2026-11-19 (day 2). None to sell.
+- Looked wrong: nothing. Positions: 3 of 5 slots (2 free).
+- Sent the summary with notify.py (Telegram message id 21).
+
 ## 2026-11-20 (Fri, 9:19am New York, before the open): approve job
 
 - Mode: alert. Today's morning entry (8:38am) lists nothing waiting for approval, so nothing to check or place. Stopped.
