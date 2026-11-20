@@ -1,5 +1,31 @@
 # log.md (newest entries at the top)
 
+## Lessons (weekly review, 2026-11-20, week of 2026-11-16 to 11-20; the next runs read this)
+
+- Week result: account $10,000.00 to $9,737.21 (-2.63%) at Friday's close. Realized -$151.24 (2 closed trades), unrealized -$111.45 (DIS, PG, COST still open).
+- Closed trades this week (from Alpaca fills): 2, both stops, 0 wins.
+  - KO 20: paid 98.969 (11/17), sold 95.54 (11/19, stop 95.55): -$68.58, -3.46%.
+  - PEP 13: paid 143.81 (11/17), sold 137.45 avg (11/19, stop 137.37): -$82.66, -4.42%.
+- Backtest expects (breakout, closed trades): 5-year trades.csv 378 trades, 44.7% wins, avg win +7.99%, avg loss -4.73%. One-year replay 83 trades, 38.6% wins, avg win +8.56%, avg loss -4.79%.
+  - Week: 0% wins, avg win n/a, avg loss -3.94%. The losses were smaller than the backtest's average loss, which fits the 2 x ATR stop. Two losses out of two trades happens about a third of the time at a 40-45% win rate, so 2 trades say nothing about the rule yet. No change to how the desk trades.
+- Fills vs plan. The morning job plans at the last close; the backtest buys at the next open.
+  - vs the planned last close: KO -0.51%, PG -0.78%, COST +0.06%, PEP -1.79%, DIS -0.10% (fills mostly below the plan because the stocks opened lower).
+  - vs the open (IEX opening print, approximate): KO +0.32%, PG +0.18%, COST +0.35%, PEP +0.44%, DIS +0.22%. Market buys filled 0-4 minutes after the open, about 0.2-0.4% above the open. The backtest assumes a fill exactly at the open, so live results will run slightly behind it. Keep watching this.
+  - Stop fills: KO 95.54 vs stop 95.55 (-0.01), PEP 137.45 avg vs stop 137.37 (+0.08). No slippage worth noting on the exits.
+  - Because the post-open job moves the stop and target to the price paid, a lower fill means a lower stop. Working as designed.
+- Concentration: on 11/17 all 4 buys were consumer staples (KO, PG, COST, PEP), and KO and PEP were stopped out within 3 minutes of each other on 11/19. Same-sector positions move together, so 4 slots in one sector behaved like one bigger bet. See Proposed changes.
+- News: the PEP downgrade (Bernstein, 11/17 pre-market) came after the scan's close and was in the morning table. PEP opened 2.2% below its last close and was the worst trade. One case is not evidence, and rules.md has no news rule. Keep flagging news like this clearly in the morning table so the user can weigh it before saying "Take it."
+- Process: every job ran on time. All brackets were in place with Alpaca at every check, with the stops held and the targets gtc. Fills, cash and positions matched log.md every day.
+
+- Weekly review summary sent with notify.py (Telegram message id 23).
+
+## Proposed changes (the user decides; any change is backtested first; rules.md not edited)
+
+- 2026-11-20 weekly review: consider a sector cap, for example at most 2 open positions in the same sector. If more qualify than that allows, take the biggest six-month gain first, as now.
+  - Reason: this week 4 of 4 entries were consumer staples, and two of them hit their stops the same morning. A cap would spread the 5 slots across more independent bets.
+  - Evidence is thin (one week, 2 closed trades). It needs a sector list for the 30 stocks and a backtest over trades.csv's 5 years, comparing return, drawdown and win rate, before it's worth deciding.
+
+
 ## 2026-11-20 (Fri, 3:38pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Next open Mon 2026-11-23. Account PA35HKRDP (paper), ACTIVE, value $9,751.80 (down 0.02% today from $9,754.16), cash $4,889.98. Daily limit (3%) not hit.
