@@ -1,5 +1,30 @@
 # log.md (newest entries at the top)
 
+## 2026-11-24 (Tue, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. 1 trade waiting for approval (WMT).
+- Clock: today is a trading day, market closed, opens 9:30am New York. The run started at 8:38am, before the 9:25am cutoff.
+- Account PA35HKRDP (paper), ACTIVE, value $9,764.83 (pre-market prices), cash $4,889.98. Daily limit: last full trading day (2026-11-23) change +0.36% ($9,742.88 to $9,777.81), so new trades are allowed.
+- Positions: DIS 16, PG 11, COST 1 (3 of 5 slots, 2 free). Open orders: the 3 bracket targets (DIS 133.92, PG 184.76, COST 1190.68), gtc; stops held in the same brackets (DIS 116.40, PG 165.14, COST 1076.20), checked with nested orders.
+- Scan: the scanner ran `python3 scan.py --live`, prices as of the close on 2026-11-23. Checked 30 stocks, 1 qualifies (WMT). Rechecked by running the scan myself: same result. WMT is in stocks.txt, not held, and fits in the 2 free slots. Cash covers it.
+- Looked wrong: nothing in the account. Note: COST is 1072.75 pre-market, below its 1076.20 stop, so the stop will probably sell it at the open.
+- Sent the trade with notify.py (Telegram message id 27). The COST line in that message was garbled (it said both "above" and "below" its stop), so I sent a one-line correction (Telegram message id 28). The proposal is still message 27.
+
+### Waiting for approval
+Telegram message id: 27
+Only counts before the open on Tue 2026-11-24 (9:30am New York). If not approved by then, drop it.
+Size is 20% of $9,764.83 = $1,952.97, whole shares. Stop (2 x ATR) and target (4 x ATR) are estimates from the last close; the post-open job moves them to the price actually paid.
+
+| Stock | Shares | Last close | About | ATR(14) | Stop (est.) | Target (est.) | 6-mo gain | News |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| WMT | 15 | 129.58 | $1,944 | 2.99 | 123.61 | 141.52 | +9.5% | No earnings in the next 2 days (Q3 beat 11/17, outlook raised). Target raises from Guggenheim ($140, 11/23), Morgan Stanley ($135), KeyBanc and Raymond James (11/20). No downgrades. Small insider sale (~$362K, 11/24). Grubhub acquisition reports (11/23). |
+
+### For the next run
+- jobs/approve.md: check for "Take it." after Telegram message id 27. Recheck the account, positions and open orders before placing. Only before 9:30am.
+- If placed, the post-open job must check the WMT fill and move its stop and target to the price paid, using ATR 2.99.
+- Post-open job: check whether COST's stop (1076.20) filled at the open (it was below the stop pre-market). If it did, log the sale and confirm the target leg was cancelled.
+- Time limit: PG and COST bought 2026-11-17 (day 6 of 30 at today's open), DIS bought 2026-11-19 (day 4). None to sell.
+
 ## 2026-11-23 (Mon, 3:38pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Next open Tue 2026-11-24. Account PA35HKRDP (paper), ACTIVE, value $9,782.52 (up 0.41% today from $9,742.88), cash $4,889.98. Daily limit (3%) not hit.
