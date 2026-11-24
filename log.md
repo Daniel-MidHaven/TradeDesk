@@ -1,5 +1,22 @@
 # log.md (newest entries at the top)
 
+## 2026-11-24 (Tue, 10:09am New York, market open): post-open job
+
+- Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,826.44 (up 0.50% today from $9,777.81), cash $4,005.14. Daily limit (3%) not hit.
+- Orders placed today: the WMT bracket (e6d0fc0a-feb5-4d91-a085-79b543722cd8) filled 15 @ 130.69 at 9:31am. Nothing unfilled, nothing to cancel.
+- WMT stop and target moved to the price paid, ATR 2.99 from the morning entry: stop 130.69 - 5.98 = 124.71 (was 123.61), target 130.69 + 11.96 = 142.65 (was 141.52). Both moved with replace, same bracket group (a0fe5b1d), gtc. New ids: stop 5a68b8db-de98-4087-818a-be5949607385 (held), target 8ac30b48-dd0c-47a2-8ccb-4ff4e12dd04f (new).
+- COST stop filled at the open: 1 sold @ 1075.51 at 9:32am (stop 1076.20, -0.69 slippage). Paid 1114.36, so -$38.85 (-3.49%). Its target leg (1190.68) shows as cancelled by Alpaca. Cash checks out: 4,889.98 + 1,075.51 - 1,960.35 = 4,005.14.
+
+| Stock | Shares | Paid | Now | Unrealized | Stop | Target |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 122.18 | -$0.96 | 116.40 (held) | 133.92 (new) |
+| PG | 11 | 171.68 | 171.82 | +$1.54 | 165.14 (held) | 184.76 (new) |
+| WMT | 15 | 130.69 | 131.76 | +$16.05 | 124.71 (held) | 142.65 (new) |
+
+- Time limit: PG bought 2026-11-17 (day 6 of 30), DIS 2026-11-19 (day 4), WMT today (day 0). None to sell.
+- Looked wrong: nothing. Positions: 3 of 5 slots (2 free).
+- Sent the summary with notify.py (Telegram message id 31).
+
 ## 2026-11-24 (Tue, 9:19am New York, before the open): approve job
 
 - Mode: alert. The newest morning entry is from today and lists 1 trade waiting for approval (WMT, Telegram message id 27).
