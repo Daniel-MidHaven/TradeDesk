@@ -1,5 +1,20 @@
 # log.md (newest entries at the top)
 
+## 2026-11-24 (Tue, 9:19am New York, before the open): approve job
+
+- Mode: alert. The newest morning entry is from today and lists 1 trade waiting for approval (WMT, Telegram message id 27).
+- Clock: today is a trading day, market closed, opens 9:30am New York. Checked at 9:19am.
+- `python3 check_approval.py --after-message-id 27` printed APPROVED.
+- Rechecked: account PA35HKRDP (paper), ACTIVE, value $9,773.08 (pre-market prices), cash $4,889.98. Positions: DIS 16, PG 11, COST 1 (WMT not held). Open orders: the 3 bracket targets for DIS, PG, COST; no WMT orders. Daily limit: last full trading day (2026-11-23) change +0.36% ($9,742.88 to $9,777.81), so new trades are allowed. WMT makes 4 of 5 positions. About $1,944, within the cash.
+- Placed 1 bracket order, buy at the market, time in force gtc, for the open (shares, stop and target from the morning entry):
+
+| Stock | Shares | Stop | Target | Order id | Status |
+| --- | --- | --- | --- | --- | --- |
+| WMT | 15 | 123.61 | 141.52 | e6d0fc0a-feb5-4d91-a085-79b543722cd8 | pending_new (stop and target legs held) |
+
+- Sent the summary with notify.py (Telegram message id 30).
+- For the post-open job: check the WMT fill and move its stop (2 x ATR) and target (4 x ATR) to the price paid, using ATR 2.99. Also check whether COST's stop (1076.20) filled at the open (COST was 1073.00 pre-market, below the stop).
+
 ## 2026-11-24 (Tue, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. 1 trade waiting for approval (WMT).
