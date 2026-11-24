@@ -1,5 +1,21 @@
 # log.md (newest entries at the top)
 
+## 2026-11-24 (Tue, 3:38pm New York, market open, closes 4:00pm): close job
+
+- Clock: trading day. Next open Wed 2026-11-25. Account PA35HKRDP (paper), ACTIVE, value $9,826.56 (up 0.50% today from $9,777.81), cash $4,005.14. Daily limit (3%) not hit.
+- Bought today: WMT 15 @ 130.69 (9:31am, bracket e6d0fc0a). Sold today: COST 1 @ 1075.51 (9:32am, stop), -$38.85 (-3.49%). No other fills.
+- Stops and targets: all 3 positions still have both with Alpaca, gtc, checked with nested orders (stops held, targets new, same bracket groups). Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| DIS | 16 | 122.24 | 121.94 | -$4.80 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 172.33 | +$7.15 | 165.14 | 184.76 |
+| WMT | 15 | 130.69 | 131.65 | +$14.40 | 124.71 | 142.65 |
+
+- Time limit: PG bought 2026-11-17 (day 7 of 30 at tomorrow's open), DIS 2026-11-19 (day 5), WMT 2026-11-24 (day 1). None to sell.
+- Looked wrong: nothing. Positions: 3 of 5 slots (2 free for the next morning run).
+- Sent the summary with notify.py (Telegram message id 32).
+
 ## 2026-11-24 (Tue, 10:09am New York, market open): post-open job
 
 - Clock: trading day, market open (closes 4:00pm). Account PA35HKRDP (paper), ACTIVE, value $9,826.44 (up 0.50% today from $9,777.81), cash $4,005.14. Daily limit (3%) not hit.
