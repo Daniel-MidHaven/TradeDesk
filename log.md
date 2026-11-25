@@ -1,5 +1,21 @@
 # log.md (newest entries at the top)
 
+## 2026-11-25 (Wed, 9:18am New York, before the open): approve job
+
+- Mode: alert. The newest morning entry is from today and lists 2 trades waiting for approval (ABBV, COST, Telegram message id 33).
+- Clock: today is a trading day, market closed, opens 9:30am New York. Checked at 9:18am.
+- `python3 check_approval.py --after-message-id 33` printed APPROVED.
+- Rechecked: account PA35HKRDP (paper), ACTIVE, value $9,857.82 (pre-market prices), cash $4,005.10. Positions: DIS 16, PG 11, WMT 15 (ABBV and COST not held). Open orders: the 3 bracket targets for DIS, PG, WMT; no ABBV or COST orders. Daily limit: last full trading day (2026-11-24) change +0.71% ($9,777.81 to $9,847.08), so new trades are allowed. ABBV and COST make 5 of 5 positions. About $2,893 total, within the cash.
+- Placed 2 bracket orders, buy at the market, time in force gtc, for the open (shares, stop and target from the morning entry):
+
+| Stock | Shares | Stop | Target | Order id | Status |
+| --- | --- | --- | --- | --- | --- |
+| ABBV | 6 | 286.04 | 328.76 | e69d1f68-b272-4f30-939c-d2df499f982a | pending_new (stop and target legs held) |
+| COST | 1 | 1053.63 | 1167.88 | 8f4220d9-11e6-402a-92fc-85009f7178af | pending_new (stop and target legs held) |
+
+- Sent the summary with notify.py (Telegram message id 35).
+- For the post-open job: check the ABBV and COST fills and move each stop (2 x ATR) and target (4 x ATR) to the price paid, using ATR 7.12 (ABBV) and 19.04 (COST). All 5 slots are now in use.
+
 ## 2026-11-25 (Wed, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. 2 trades waiting for approval (ABBV, COST).
