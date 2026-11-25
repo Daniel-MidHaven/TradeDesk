@@ -1,5 +1,31 @@
 # log.md (newest entries at the top)
 
+## 2026-11-25 (Wed, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. 2 trades waiting for approval (ABBV, COST).
+- Clock: today is a trading day (full day, closes 4:00pm), market closed, opens 9:30am New York. The run started at 8:38am, before the 9:25am cutoff.
+- Account PA35HKRDP (paper), ACTIVE, value $9,858.90 (pre-market prices), cash $4,005.10. Daily limit: last full trading day (2026-11-24) change +0.71% ($9,777.81 to $9,847.08), so new trades are allowed.
+- Positions: DIS 16, PG 11, WMT 15 (3 of 5 slots, 2 free). Open orders: the 3 bracket targets (DIS 133.92, PG 184.76, WMT 142.65), gtc; stops held in the same brackets (DIS 116.40, PG 165.14, WMT 124.71), checked with nested orders.
+- Scan: the scanner ran `python3 scan.py --live`, prices as of the close on 2026-11-24. Checked 30 stocks, 4 qualify (ABBV, DIS, COST, WMT). Rechecked by running the scan myself: same result. DIS and WMT are already held, so skipped. ABBV and COST are in stocks.txt, not held, and fill the 2 free slots. Cash covers both (~$2,893).
+- Looked wrong: nothing in the account. Note: COST was stopped out yesterday (1075.51) and is a fresh breakout today; rules.md has no re-entry rule. The news feed has no earnings calendar; COST usually reports mid-December (not confirmed).
+- Sent the trades with notify.py (Telegram message id 33).
+
+### Waiting for approval
+Telegram message id: 33
+Only counts before the open on Wed 2026-11-25 (9:30am New York). If not approved by then, drop them.
+Size is 20% of $9,858.90 = $1,971.78 per trade, whole shares. Stop (2 x ATR) and target (4 x ATR) are estimates from the last close; the post-open job moves them to the price actually paid.
+
+| Stock | Shares | Last close | About | ATR(14) | Stop (est.) | Target (est.) | 6-mo gain | News |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ABBV | 6 | 300.28 | $1,802 | 7.12 | 286.04 | 328.76 | +41.3% | No earnings in the next 2 days (per news, no calendar). FDA approved Rinvoq for nonsegmental vitiligo (11/23). |
+| COST | 1 | 1091.71 | $1,092 | 19.04 | 1053.63 | 1167.88 | +12.2% | No earnings in the next 2 days (per news; usually mid-December). Mizuho: emergency-prep stockpiling lifting sales (11/18); new Canada warehouses. |
+
+### For the next run
+- jobs/approve.md: check for "Take it." after Telegram message id 33. Recheck the account, positions and open orders before placing. Only before 9:30am.
+- If placed, the post-open job must check the fills and move each stop and target to the price paid, using ATR 7.12 (ABBV) and 19.04 (COST).
+- Time limit: PG bought 2026-11-17 (day 8 of 30 at today's open), DIS 2026-11-19 (day 6), WMT 2026-11-24 (day 2). None to sell.
+- Market closed Thu 11/26 (Thanksgiving); Fri 11/27 is likely an early close (1:00pm), check the clock.
+
 ## 2026-11-24 (Tue, 3:38pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Next open Wed 2026-11-25. Account PA35HKRDP (paper), ACTIVE, value $9,826.56 (up 0.50% today from $9,777.81), cash $4,005.14. Daily limit (3%) not hit.
