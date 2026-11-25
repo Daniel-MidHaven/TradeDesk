@@ -1,5 +1,25 @@
 # log.md (newest entries at the top)
 
+## 2026-11-25 (Wed, 10:09am New York, market open): post-open job
+
+- Clock: trading day, market open (closes 4:00pm; next open Fri 2026-11-27, market closed Thu for Thanksgiving). Account PA35HKRDP (paper), ACTIVE, value $9,826.67 (down 0.21% today from $9,847.08), cash $1,093.00. Daily limit (3%) not hit.
+- Orders placed today: both brackets filled. ABBV (e69d1f68) filled 6 @ 302.85 at 9:30am. COST (8f4220d9) filled 1 @ 1095.00 at 9:32am. Nothing unfilled, nothing to cancel. Cash checks out: 4,005.10 - 1,817.10 - 1,095.00 = 1,093.00.
+- Stops and targets moved to the price paid, using the ATR from the morning entry. All moved with replace, same bracket groups, gtc:
+  - ABBV (ATR 7.12): stop 302.85 - 14.24 = 288.61 (was 286.04), target 302.85 + 28.48 = 331.33 (was 328.76). New ids: stop ec36c1de-c9a5-46c9-a577-04b00b77bf91 (held), target 91307d01-00c8-4e8d-8173-4a346d948277 (new). Group c12c0ef0.
+  - COST (ATR 19.04): stop 1095.00 - 38.08 = 1056.92 (was 1053.63), target 1095.00 + 76.16 = 1171.16 (was 1167.88). New ids: stop 5b0775ca-48f2-473b-8fe8-2661acd969eb (held), target fe3dc83b-2953-4e8e-a291-c19aa33e6c3e (new). Group 966af202.
+
+| Stock | Shares | Paid | Now | Unrealized | Stop | Target |
+| --- | --- | --- | --- | --- | --- | --- |
+| ABBV | 6 | 302.85 | 298.24 | -$27.66 | 288.61 (held) | 331.33 (new) |
+| COST | 1 | 1095.00 | 1093.76 | -$1.24 | 1056.92 (held) | 1171.16 (new) |
+| DIS | 16 | 122.24 | 122.11 | -$2.16 | 116.40 (held) | 133.92 (new) |
+| PG | 11 | 171.68 | 173.12 | +$15.79 | 165.14 (held) | 184.76 (new) |
+| WMT | 15 | 130.69 | 132.84 | +$32.18 | 124.71 (held) | 142.65 (new) |
+
+- Time limit: PG bought 2026-11-17 (day 6 of 30), DIS 2026-11-19 (day 4), WMT 2026-11-24 (day 1), ABBV and COST today (day 0). None to sell.
+- Looked wrong: nothing. Positions: 5 of 5 slots (none free).
+- Sent the summary with notify.py (Telegram message id 36).
+
 ## 2026-11-25 (Wed, 9:18am New York, before the open): approve job
 
 - Mode: alert. The newest morning entry is from today and lists 2 trades waiting for approval (ABBV, COST, Telegram message id 33).
