@@ -1,5 +1,9 @@
 # log.md (newest entries at the top)
 
+## 2026-11-26 (Thu, 9:18am New York, market closed): approve job
+
+- Not a trading day: Alpaca's clock shows the market closed (Thanksgiving), next open Fri 2026-11-27 9:30am, early close 1:00pm. Nothing waiting for approval this morning. Nothing checked on Telegram, nothing placed, nothing sent.
+
 ## 2026-11-26 (Thu, 8:39am New York, market closed): morning job
 
 - Not a trading day: Alpaca's clock shows the market closed, and the calendar has no session on 2026-11-26 (Thanksgiving). Next open Fri 2026-11-27 9:30am, early close 1:00pm.
