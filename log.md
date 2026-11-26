@@ -1,5 +1,11 @@
 # log.md (newest entries at the top)
 
+## 2026-11-26 (Thu, 8:39am New York, market closed): morning job
+
+- Not a trading day: Alpaca's clock shows the market closed, and the calendar has no session on 2026-11-26 (Thanksgiving). Next open Fri 2026-11-27 9:30am, early close 1:00pm.
+- Nothing scanned, nothing placed, nothing sent for approval. Stopped here as the scheduled prompt says.
+- For the next run: Friday's morning job runs as usual. Positions were 5 of 5 at Wednesday's close (no free slots), with all stops and targets held by Alpaca.
+
 ## 2026-11-25 (Wed, 3:38pm New York, market open, closes 4:00pm): close job
 
 - Clock: trading day. Next open Fri 2026-11-27 (market closed Thu for Thanksgiving). Account PA35HKRDP (paper), ACTIVE, value $9,839.16 (down 0.08% today from $9,847.08), cash $1,093.00. Daily limit (3%) not hit.
