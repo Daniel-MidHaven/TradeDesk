@@ -1,5 +1,10 @@
 # log.md (newest entries at the top)
 
+## 2026-11-26 (Thu, 10:08am New York, market closed): post-open job
+
+- Not a trading day: Alpaca's clock shows the market closed, and the calendar has no session on 2026-11-26 (Thanksgiving). Next open Fri 2026-11-27 9:30am, early close 1:00pm.
+- No fills to check, no stops or targets moved, nothing sold, nothing sent on Telegram. Stopped here as the scheduled prompt says.
+
 ## 2026-11-26 (Thu, 9:18am New York, market closed): approve job
 
 - Not a trading day: Alpaca's clock shows the market closed (Thanksgiving), next open Fri 2026-11-27 9:30am, early close 1:00pm. Nothing waiting for approval this morning. Nothing checked on Telegram, nothing placed, nothing sent.
