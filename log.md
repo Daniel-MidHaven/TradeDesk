@@ -1,5 +1,23 @@
 # log.md (newest entries at the top)
 
+## 2026-11-27 (Fri, 10:09am New York, market open, early close 1:00pm): post-open job
+
+- Clock: trading day, market open, closes 1:00pm (early close). Next open Mon 2026-11-30 9:30am. Account PA35HKRDP (paper), ACTIVE, value $9,855.71 (up 0.15% today from $9,840.91), cash $1,092.99. Daily limit (3%) not hit.
+- Orders placed today: none (the morning and approve jobs placed nothing, 5 of 5 slots full). No fills to check, nothing to cancel.
+- Bought today: nothing, so no stops or targets to move. Open orders: the 5 bracket targets (ABBV 331.33, COST 1171.16, DIS 133.92, PG 184.76, WMT 142.65), gtc, status new. Stops held in the same bracket groups (ABBV 288.61, COST 1056.92, WMT 124.71 seen held in the nested orders; DIS 116.40 and PG 165.14 checked held by this morning's job). Nothing changed.
+
+| Stock | Shares | Paid | Now | Unrealized | Stop | Target |
+| --- | --- | --- | --- | --- | --- | --- |
+| ABBV | 6 | 302.85 | 292.17 | -$64.11 | 288.61 (held) | 331.33 (new) |
+| COST | 1 | 1095.00 | 1095.73 | +$0.73 | 1056.92 (held) | 1171.16 (new) |
+| DIS | 16 | 122.24 | 127.02 | +$76.48 | 116.40 (held) | 133.92 (new) |
+| PG | 11 | 171.68 | 172.73 | +$11.55 | 165.14 (held) | 184.76 (new) |
+| WMT | 15 | 130.69 | 132.11 | +$21.30 | 124.71 (held) | 142.65 (new) |
+
+- Time limit: PG (bought 11-17) day 8 of 30, DIS (11-19) day 6, WMT (11-24) day 3, ABBV and COST (11-25) day 2. None to sell.
+- Looked wrong: nothing. Note: ABBV is 3.56 above its stop (292.17 vs 288.61).
+- Sent the summary with notify.py (Telegram message id 39).
+
 ## 2026-11-27 (Fri, 9:18am New York, before the open): approve job
 
 - Mode: alert. The newest morning entry is from today and lists nothing under "Waiting for approval" (5 of 5 slots full), so nothing was checked on Telegram, nothing placed, nothing sent. Stopped here.
