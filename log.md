@@ -1,5 +1,23 @@
 # log.md (newest entries at the top)
 
+## 2026-11-27 (Fri, 8:38am New York, before the open): morning job
+
+- Mode: alert. Nothing placed. Nothing waiting for approval.
+- Clock: today is a trading day, early close 1:00pm (calendar: open 9:30, close 13:00). Market closed, opens 9:30am. The run started at 8:38am, before the 9:25am cutoff.
+- Account PA35HKRDP (paper), ACTIVE, value $9,844.31 (pre-market prices), cash $1,092.99. Daily limit: last full trading day (2026-11-25) change -0.06% ($9,847.08 to $9,840.91), so not hit.
+- Positions: ABBV 6, COST 1, DIS 16, PG 11, WMT 15 (5 of 5 slots, none free). Open orders: the 5 bracket targets (ABBV 331.33, COST 1171.16, DIS 133.92, PG 184.76, WMT 142.65), gtc, status new; the 5 stops (ABBV 288.61, COST 1056.92, DIS 116.40, PG 165.14, WMT 124.71), gtc, status held, same bracket groups, checked by id. Matches log.md.
+- Scan (scanner sub-agent, `python3 scan.py --live`, prices as of the close on 2026-11-25): 4 of 30 qualify. DIS and PG skipped (already held). HD (+14.1% 6-mo, ATR 9.52) and MCD (+3.4%, ATR 6.22) skipped: no free slot (5 positions max).
+- Looked wrong: nothing.
+- Sent the summary with notify.py (Telegram message id 38).
+
+### Waiting for approval
+None.
+
+### For the next run
+- jobs/approve.md: nothing waiting for approval today, nothing to check on Telegram.
+- Time limit: at today's open PG (bought 11-17) has held 8 trading days, DIS (11-19) 6, WMT (11-24) 3, ABBV and COST (11-25) 2. None reaches 30.
+- Early close 1:00pm today; the close job should check the clock.
+
 ## 2026-11-26 (Thu, 3:38pm New York, market closed): close job
 
 - Not a trading day: Alpaca's clock shows the market closed, and the calendar has no session on 2026-11-26 (Thanksgiving). Next open Fri 2026-11-27 9:30am, early close 1:00pm.
