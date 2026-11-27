@@ -1,5 +1,23 @@
 # log.md (newest entries at the top)
 
+## 2026-11-27 (Fri, 3:38pm New York, market closed after the 1:00pm early close): close job
+
+- Clock: trading day (early close 1:00pm, calendar open 9:30, close 13:00). Next open Mon 2026-11-30 9:30am. Account PA35HKRDP (paper), ACTIVE, value $9,884.03 (up 0.44% today from $9,840.91), cash $1,092.99. Daily limit (3%) not hit.
+- Bought today: nothing. Sold today: nothing. No fills today (account activities empty since 11-26).
+- Stops and targets: all 5 positions still have both with Alpaca, gtc, same bracket groups, checked with nested orders (stops held, targets new). Nothing changed.
+
+| Stock | Shares | Paid | Last | Unrealized | Stop (held) | Target (new) |
+| --- | --- | --- | --- | --- | --- | --- |
+| ABBV | 6 | 302.85 | 292.71 | -$60.84 | 288.61 | 331.33 |
+| COST | 1 | 1095.00 | 1098.85 | +$3.85 | 1056.92 | 1171.16 |
+| DIS | 16 | 122.24 | 127.65 | +$86.54 | 116.40 | 133.92 |
+| PG | 11 | 171.68 | 172.21 | +$5.87 | 165.14 | 184.76 |
+| WMT | 15 | 130.69 | 133.28 | +$38.85 | 124.71 | 142.65 |
+
+- Time limit: at Monday's open PG (bought 11-17) has held 9 trading days, DIS (11-19) 7, WMT (11-24) 4, ABBV and COST (11-25) 3. None reaches 30, none to sell.
+- Looked wrong: nothing. Note: ABBV is 4.10 above its stop (292.71 vs 288.61). Positions: 5 of 5 slots (none free).
+- Sent the summary with notify.py (Telegram message id 40).
+
 ## 2026-11-27 (Fri, 10:09am New York, market open, early close 1:00pm): post-open job
 
 - Clock: trading day, market open, closes 1:00pm (early close). Next open Mon 2026-11-30 9:30am. Account PA35HKRDP (paper), ACTIVE, value $9,855.71 (up 0.15% today from $9,840.91), cash $1,092.99. Daily limit (3%) not hit.
