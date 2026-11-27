@@ -1,5 +1,33 @@
 # log.md (newest entries at the top)
 
+## Lessons (weekly review, 2026-11-27, week of 2026-11-23 to 11-27; the next runs read this)
+
+- Week result: account $9,742.88 (Fri 11-20 close) to $9,901.04 (Alpaca now, after Friday's 1:00pm early close): +$158.16, +1.62%. Since the start: $10,000.00 to $9,901.04, -0.99%. Realized this week -$38.85 (1 closed trade). Unrealized +$91.28 on 5 open positions (ABBV -58.68, COST +3.60, DIS +89.28, PG +17.93, WMT +39.15).
+- Closed trades this week (from Alpaca fills): 1, a stop, 0 wins.
+  - COST 1: paid 1114.36 (11/17), sold 1075.51 (11/24, stop 1076.20): -$38.85, -3.49%.
+- Bought this week: WMT 15 @ 130.69 (11/24), ABBV 6 @ 302.85 (11/25), COST 1 @ 1095.00 (11/25, re-entry the day after its stop).
+- Backtest expects (breakout, closed trades): 5-year trades.csv 378 trades, 44.7% wins, avg win +7.99%, avg loss -4.73%. One-year replay 83 trades, 38.6% wins, avg win +8.56%, avg loss -4.79%.
+  - This week: 0 of 1 wins, avg loss -3.49%. Since the start: 0 of 3 wins (KO, PEP, COST), avg loss -3.79%, avg win n/a.
+  - Three losses in a row happens about 17-23% of the time at a 39-45% win rate, so this is still not evidence against the rule. The losses stay smaller than the backtest's average loss. No wins have closed yet, so the average-win side can't be checked; DIS (+4.6%) is the closest to its target (133.92).
+- Fills vs plan (morning plan = last close; backtest buys at the next open; opens are IEX daily bars, approximate):
+  - vs the planned last close: WMT +0.86%, ABBV +0.86%, COST +0.30% (all above the plan this week; last week they were mostly below).
+  - vs the open: WMT +0.60%, ABBV +0.36%, COST +0.14%. Market buys filled 0-2 minutes after the open. Last week was +0.18% to +0.44%; across 8 buys the average is about +0.33% above the open. The backtest assumes a fill exactly at the open, so live entries cost roughly a third of a percent per trade more. Keep watching.
+  - Stop fill: COST gapped below its stop (IEX open 1069.85 vs stop 1076.20). The stop filled at 1075.51, 0.69 under the stop but above the open. The backtest would have sold at the open (gap rule), so this exit was a little better than the backtest assumes.
+  - The post-open job moved stops and targets to the price paid every time; higher fills this week meant slightly higher stops, as designed.
+- Concentration: 3 of the 5 open positions are consumer staples again (PG, COST, WMT); DIS is media, ABBV healthcare. Last week's KO/PEP stop-outs came the same morning. Still the main risk to watch; see the 11-20 proposal below.
+- Re-entry: COST was stopped out on 11/24 and bought again on 11/25 as a fresh breakout. rules.md allows this and the backtest does the same, so it is consistent. Noted only; one case says nothing.
+- Full slots: on 11/27 HD (+14.1% 6-mo) and MCD qualified but were skipped because all 5 slots were full. Working as the rules say.
+- Process: every job ran on schedule, including the Thanksgiving closure (11/26) and the 1:00pm early close (11/27). All brackets were with Alpaca at every check (stops held, targets gtc). Fills, cash and positions matched log.md every day. The approval flow worked for 2 mornings (WMT, ABBV+COST).
+- ABBV is the weakest position, about 4.5 above its 288.61 stop at the latest price (293.07).
+
+- Weekly review summary sent with notify.py (Telegram message id 41). Nothing placed, changed or cancelled.
+
+## Proposed changes (weekly review 2026-11-27; the user decides; any change is backtested first; rules.md not edited)
+
+- No new rule change this week. Three closed trades are far too few to judge win rate or win size.
+- The 2026-11-20 sector-cap idea (at most 2 open positions per sector) still stands and got one more data point: this week 3 of 5 slots are again consumer staples. It still needs a sector list for the 30 stocks and a backtest over trades.csv's 5 years (return, drawdown, win rate) before it's worth deciding.
+- Worth adding to that backtest (no rule change proposed): apply about +0.3% to each entry price, to see how much the live fills just after the open cost compared with the backtest's fill at the open.
+
 ## 2026-11-27 (Fri, 3:38pm New York, market closed after the 1:00pm early close): close job
 
 - Clock: trading day (early close 1:00pm, calendar open 9:30, close 13:00). Next open Mon 2026-11-30 9:30am. Account PA35HKRDP (paper), ACTIVE, value $9,884.03 (up 0.44% today from $9,840.91), cash $1,092.99. Daily limit (3%) not hit.
