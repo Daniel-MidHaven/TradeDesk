@@ -1,5 +1,9 @@
 # log.md (newest entries at the top)
 
+## 2026-11-27 (Fri, 9:18am New York, before the open): approve job
+
+- Mode: alert. The newest morning entry is from today and lists nothing under "Waiting for approval" (5 of 5 slots full), so nothing was checked on Telegram, nothing placed, nothing sent. Stopped here.
+
 ## 2026-11-27 (Fri, 8:38am New York, before the open): morning job
 
 - Mode: alert. Nothing placed. Nothing waiting for approval.
